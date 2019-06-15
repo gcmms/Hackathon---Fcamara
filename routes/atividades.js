@@ -11,11 +11,15 @@ router.get('/', function(req, res, next) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         res.render('index', {atividades: atividades})
     
 =======
         res.render('index', {atividades: atividades, titulo:'Atividades'})
 >>>>>>> parent of 282530b... Merge branch 'master' of https://github.com/gcmms/fcamara
+=======
+        res.render('index', {atividades: atividades, titulo:'Atividades'})
+>>>>>>> parent of 1cd6dd5... Reinicializacao
 =======
         res.render('index', {atividades: atividades, titulo:'Atividades'})
 >>>>>>> parent of 1cd6dd5... Reinicializacao
