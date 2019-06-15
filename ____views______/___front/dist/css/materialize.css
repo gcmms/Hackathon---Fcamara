@@ -2942,7 +2942,7 @@ ul.staggered-list li {
 }
 
 .page-footer {
-  padding-top: 20px;
+  padding-top: 1px;
   color: #fff;
   background-color: #ee6e73;
 }
@@ -7052,7 +7052,7 @@ textarea.materialize-textarea {
 }
 
 .switch label input[type=checkbox]:checked + .lever {
-  background-color: #84c7c1;
+  background-color: #d17742;
 }
 
 .switch label input[type=checkbox]:checked + .lever:before, .switch label input[type=checkbox]:checked + .lever:after {
@@ -7060,7 +7060,7 @@ textarea.materialize-textarea {
 }
 
 .switch label input[type=checkbox]:checked + .lever:after {
-  background-color: #26a69a;
+  background-color: #EE7A33;
 }
 
 .switch label .lever {
@@ -9078,17 +9078,13 @@ input[type=range]::-ms-thumb {
 
 
 /*Modificaçõ~es */
-.tabs.tabs-transparent .indicator {
-  background-color: #EE7A33;
+.logoFcamara {
+  padding: 100px;
 }
 
-.tabs.tabs-fcamara a{
-  background-color: #f7b88d;
-  color: #ffff;
-}
-
-/*quyando ativo*/
-.tabs .tab a:hover, .tabs .tab a.active {
-  background-color: transparent;
-  color: #f7b88d;
+.footer-fcamra {
+    background-color:  #63439a;
+    position:absolute;
+    bottom:0;
+    width:100%;
 }
