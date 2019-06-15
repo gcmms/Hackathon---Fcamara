@@ -9,11 +9,15 @@ const Atividade = mongoose.model('atividades')
 router.get('/', function(req, res, next) {
     Atividade.find().then((atividades) =>{
 <<<<<<< HEAD
+<<<<<<< HEAD
         res.render('index', {atividades: atividades})
     
 =======
         res.render('index', {atividades: atividades, titulo:'Atividades'})
 >>>>>>> parent of 282530b... Merge branch 'master' of https://github.com/gcmms/fcamara
+=======
+        res.render('index', {atividades: atividades, titulo:'Atividades'})
+>>>>>>> parent of 1cd6dd5... Reinicializacao
     }).catch((err)=>{
         req.flash('msg_erro', 'Houve algum erro.')
         res.render('index', {atividades: atividades, titulo:'Atividades'})
