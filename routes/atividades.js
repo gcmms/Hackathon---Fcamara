@@ -9,7 +9,7 @@ const Atividade = mongoose.model('atividades')
 router.get('/', function(req, res, next) {
 
     Atividade.find().then((atividades) =>{
-        res.render('index', {atividades:atividades})
+        res.render('home', {atividades:atividades})
     
     }).catch((err)=>{
         req.flash('msg_erro', 'Houve algum erro.')

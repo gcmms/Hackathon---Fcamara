@@ -1,20 +1,14 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:500|Roboto&display=swap');
-body {
-    background-color: whitesmoke;
-    font-family: Roboto, Montserrat, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
-}
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
 
-a {
-    text-decoration: none !important;
+.icon-block {
+  padding: 0 15px;
 }
-
-span {
-    padding-right: 1em;
-}
-
-.page-footer {
-    background-color: whitesmoke;
-    align-items: center;
-    align-content: center;
-    padding: 1em;
+.icon-block .material-icons {
+	font-size: inherit;
 }
