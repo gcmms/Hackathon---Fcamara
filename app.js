@@ -6,8 +6,9 @@ var logger = require('morgan');
 var mongoose = require('mongoose')
 var flash = require('connect-flash')
 var indexRouter = require('./routes/index');
-var atividadeRouter = require('./routes/atividades')
-var session = require('express-session')
+var atividadeRouter = require('./routes/atividades');
+var session = require('express-session');
+var bodyParser = require('body-parser');
 var app = express();
 
 const uri = "mongodb+srv://admin:@admin3011@node-7hcq3.mongodb.net/test?retryWrites=true&w=majority";
@@ -42,7 +43,8 @@ app.use(session({
     resave: true,
     saveUnintialized: true
 }));
-
+app.use(bodyParser.urlencoded({extended:true}));
+app.use(bodyParser.json());
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));

@@ -1,0 +1,35 @@
+extends layout
+block content
+		nav.nav-extended
+			.nav-wrapper
+				img.brand-logo(height='50', src='/img/fcamara.png')
+				
+			.nav-content
+				ul.tabs.tabs-transparent
+					li.tab
+						a.active(href='#fila') Disponivel
+					li.tab
+						a(href='#minhaFila') Minhas Filas
+					li.tab
+						a(href='/atividades/new') Atividades
+		ul#mobile-demo.sidenav
+		#fila.col.s12.active
+			each item in atividades
+				.row
+					.col.s12.m6
+						.card
+							.card-image
+								img(src='https://s3-sa-east-1.amazonaws.com/uploads-astrocentro/blog/wp-content/uploads/2017/11/10153129/massagem-ayurvedica.jpg')
+								span.card-title=item.nome
+							.card-content
+								p=item.descricao
+								| 
+		footer.page-footer.footer-fcamra
+			.footer-copyright
+				.container.center
+					.switch
+						label
+							| Ocupado
+							input(type='checkbox')
+							span.lever
+							|  Disponivel
