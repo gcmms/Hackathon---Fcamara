@@ -7,10 +7,13 @@ router.get('/', function(req, res, next) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     res.render('index')
 });
 
 =======
+=======
+>>>>>>> parent of 1cd6dd5... Reinicializacao
 =======
 >>>>>>> parent of 1cd6dd5... Reinicializacao
 =======
