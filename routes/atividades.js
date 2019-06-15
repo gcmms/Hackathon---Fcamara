@@ -31,13 +31,17 @@ router.get('/', function(req, res, next) {
     }
 
     new Atividade(novaAtividade).save().then(()=>{
-        console.log('succ')
-        req.flash('msg_sucesso', 'Cadastrado com sucesso.')
-        res.redirect('home')
+        console.log('ok')
+        Atividade.find().then((atividades) =>{
+            res.render('home', {atividades:atividades})
+            
+        })
+        
     }).catch((err) => {
-        console.log(err)
-        req.flash('msg_erro', 'Houve algum erro.')
-        res.redirect('home')
+        Atividade.find().then((atividades) =>{
+            res.render('home', {atividades:atividades})
+            
+        })
     })
 
   });
@@ -87,6 +91,16 @@ router.get('/', function(req, res, next) {
     res.render('index');
   });
 
+
+  router.get('/ajax', function(req, res, next) {
+
+    Atividade.find().then((atividades) =>{
+        res.send(atividades)
+    
+    }).catch((err)=>{
+        res.send('Erro ')
+    })
+  });
 
 
 module.exports = router;
