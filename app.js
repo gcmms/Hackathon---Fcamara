@@ -4,10 +4,14 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var mongoose = require('mongoose');
+var handlebars = require('express-handlebars')
+var flash = require('connect-flash')
 var indexRouter = require('./routes/index');
+var atividadesRouter = require('./routes/atividades');
+var slack = require('slack');
 var app = express();
 
-const uri = "mongodb+srv://fctech:PUt1L5vtaPORKZlb@cluster0-ti9h0.mongodb.net/fctech?retryWrites=true&w=majority";
+const uri = "mongodb+srv://admin:@admin3011@node-7hcq3.mongodb.net/test?retryWrites=true&w=majority";
 const options = {
     reconnectTries: Number.MAX_VALUE,
     reconnectInterval: 500,
@@ -31,9 +35,14 @@ mongoose.connection.on('error', (err) => {
 });
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'pug');
-
+app.engine('handlebars', handlebars({defaultLayout: 'main'}));
+app.set('view engine', 'handlebars');
+app.use(flash());
+app.use((req, res, next) =>{
+    res.locals.msg_sucesso = req.flash('msg_sucesso')
+    res.locals.msg_erro = req.flash('msg_erro')
+    next()
+})
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({
@@ -43,6 +52,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
+app.use('/atividades', atividadesRouter);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
     next(createError(404));
@@ -56,7 +66,7 @@ app.use(function(err, req, res, next) {
 
     // render the error page
     res.status(err.status || 500);
-    res.render('error');
+    //res.render('error');
 });
 
 module.exports = app;

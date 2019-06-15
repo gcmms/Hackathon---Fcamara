@@ -1,17 +1,24 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-const CourseSchema = new Schema({
+const Atividade = new Schema({
 
-    name: {
+    nome: {
         type: String,
         required: true
     },
-    category: {
+    descricao: {
         type: String,
         required: true
+    },
+    hr_inicio:{
+        type: Date
+    },
+    hr_fim:{
+        type: Date},
+    limite: {
+        type: Number
     }
 
 });
-
-module.exports = mongoose.model('courses', CourseSchema);
+mongoose.model('atividades', Atividade);
