@@ -13,7 +13,7 @@ router.get('/', function(req, res, next) {
     
     }).catch((err)=>{
         req.flash('msg_erro', 'Houve algum erro.')
-        res.render('index')
+        res.render('home')
     })
   });
 
@@ -22,7 +22,6 @@ router.get('/', function(req, res, next) {
   })
 
   router.post('/new', function(req, res, next) {
-
     var novaAtividade = {
       nome: req.body.nome,
       descricao: req.body.descricao,
@@ -34,9 +33,11 @@ router.get('/', function(req, res, next) {
     new Atividade(novaAtividade).save().then(()=>{
         console.log('succ')
         req.flash('msg_sucesso', 'Cadastrado com sucesso.')
+        res.redirect('home')
     }).catch((err) => {
         console.log(err)
         req.flash('msg_erro', 'Houve algum erro.')
+        res.redirect('home')
     })
 
   });

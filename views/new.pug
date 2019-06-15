@@ -1,0 +1,39 @@
+extends layout
+block content
+    nav.nav-extended
+      .nav-wrapper
+        img.brand-logo(height='50', src='/img/fcamara.png')
+        // <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    .row
+      #fila.col.s12.active
+        .row
+          form.col.s12(action='/atividades/new', method='POST')
+            .row
+              .input-field.col.s12
+                input#nome.validate(type='text')
+                label(for='nome') Nome do Serviço
+            .row
+              .input-field.col.s6
+                input#hr_inicio.validate(type='date')
+                label(for='hr_inicio') Hora Inicio
+              .input-field.col.s6
+                input#hr_fim.validate(type='date')
+                label(for='hr_fim') Hora Fim
+            .row
+              .input-field.col.s12
+                input#limite.validate(type='text')
+                label(for='limite') Limite de pessoas na fila
+            .row
+              .input-field.col.s12
+                input#descricao.validate(type='text')
+                label(for='descricao') Descrição
+              button.waves-effect.waves-light.btn(type='submit') Cadastrar
+    footer.page-footer.footer-fcamra
+      .footer-copyright
+        .container.center
+          .switch
+            label
+              | Ocupado
+              input(type='checkbox')
+              span.lever
+              | 			      Disponivel
