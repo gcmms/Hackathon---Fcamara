@@ -6,10 +6,13 @@ var Atividades = require('../models/atividades')
 router.get('/', function(req, res, next) {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     res.render('index')
 });
 
 =======
+=======
+>>>>>>> parent of 1cd6dd5... Reinicializacao
 =======
 >>>>>>> parent of 1cd6dd5... Reinicializacao
   res.render('index', { titulo: 'Express' });
