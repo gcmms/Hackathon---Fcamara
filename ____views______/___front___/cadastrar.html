@@ -27,7 +27,7 @@
 
 	<div id="fila" class="col s12 active">
 		<div class="row">
-		    <form class="col s12">
+		    <form class="col s12" method="POST" name="cadastroForm">
 		      <div class="row">
 		        <div class="input-field col s12">
 		          <input id="first_name" type="text" class="validate">
@@ -60,7 +60,7 @@
 		      
 		    </form>
 		  </div>
-		  <a class="waves-effect waves-light btn">Cadastrar</a>
+		  <input  class="waves-effect waves-light btn" type="button" value="Proximo" onclick="cadastrarServico(this.form)">
 	</div>
 </div>
 		
