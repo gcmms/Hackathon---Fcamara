@@ -1,20 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:500|Roboto&display=swap');
 body {
-    background-color: whitesmoke;
-    font-family: Roboto, Montserrat, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
-    text-decoration: none !important;
-}
-
-span {
-    padding-right: 1em;
-}
-
-.page-footer {
-    background-color: whitesmoke;
-    align-items: center;
-    align-content: center;
-    padding: 1em;
+  color: #00B7FF;
 }

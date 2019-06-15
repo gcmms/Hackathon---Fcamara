@@ -7,18 +7,21 @@ const Atividade = mongoose.model('atividades')
 /* GET home page. */
 
 router.get('/', function(req, res, next) {
-
     Atividade.find().then((atividades) =>{
+<<<<<<< HEAD
         res.render('index', {atividades: atividades})
     
+=======
+        res.render('index', {atividades: atividades, titulo:'Atividades'})
+>>>>>>> parent of 282530b... Merge branch 'master' of https://github.com/gcmms/fcamara
     }).catch((err)=>{
         req.flash('msg_erro', 'Houve algum erro.')
-        res.render('index')
+        res.render('index', {atividades: atividades, titulo:'Atividades'})
     })
   });
 
   router.get('/new', function(req,res, next){
-      res.render('new')
+      res.render('new', {titulo:'Nova Atividade'})
   })
 
   router.post('/new', function(req, res, next) {
@@ -31,19 +34,16 @@ router.get('/', function(req, res, next) {
       limite: req.body.limite
     }
 
-    new Atividade(novaAtividade).save().then(()=>{
-        console.log('succ')
+    new Atividade(atividade).save().then(()=>{
         req.flash('msg_sucesso', 'Cadastrado com sucesso.')
     }).catch((err) => {
-        console.log(err)
         req.flash('msg_erro', 'Houve algum erro.')
     })
-
   });
 
   router.get('/edit/:id', function(req, res, next) {
       Atividade.findOne({_id: req.params._id}).then((atividade) =>{
-            res.render("edit")
+            res.render("edit", {atividade: atividade})
       }).catch((err) =>{
             req.flash('msg_erro', 'Atividade não encontrada')
             res.redirect('/index')
@@ -72,18 +72,11 @@ router.get('/', function(req, res, next) {
 
  
   router.get('/delete', function(req, res, next) {
-        Atividade.remove({_id: req.body._id}).then(()=>{
-            req.flash('msg_sucesso', 'Atividade excluída com sucesso.')
-            res.redirect('/index')
-        }).catch((err) =>{
-            req.flash('msg_erro', 'Não foi possível atualizar a atividade.')
-        res.redirect('/index')
-        })
-        
+    res.render('index', { title: 'Express' });
   });
 
   router.get('/delete/:id', function(req, res, next) {
-    res.render('index');
+    res.render('index', { title: 'Express' });
   });
 
 

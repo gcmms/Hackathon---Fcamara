@@ -1,21 +1,26 @@
 {
-  "name": "node1",
+  "name": "FCTechHackaton",
   "version": "0.0.0",
   "private": true,
   "scripts": {
     "start": "node ./bin/www"
   },
   "dependencies": {
+    "body-parser": "^1.19.0",
     "connect-flash": "^0.1.1",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "express": "~4.16.1",
+<<<<<<< HEAD
     "express-session": "^1.16.2",
     "express-sessions": "^1.0.6",
+=======
+    "express-handlebars": "^3.1.0",
+>>>>>>> parent of 282530b... Merge branch 'master' of https://github.com/gcmms/fcamara
     "http-errors": "~1.6.3",
-    "mongodb": "^3.2.7",
-    "mongoose": "^5.6.0",
+    "mongoose": "^5.5.15",
     "morgan": "~1.9.1",
-    "pug": "2.0.0-beta11"
+    "pug": "2.0.0-beta11",
+    "slack": "^11.0.2"
   }
 }
