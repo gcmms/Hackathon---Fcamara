@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">       
+      <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+      	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  		<link href="dist/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  		<link href="dist/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+            
+    </head>
+    <body>
+
+	<nav class="nav-extended">
+	    <div class="nav-wrapper">
+	    	<img class="brand-logo" height="50" src="dist/img/fcamara.png">
+	      <!--<a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>-->
+	    </div>
+	    
+  	</nav>
+
+<div class="row">
+	
+
+
+
+	<div id="fila" class="col s12 active">
+		<div class="row">
+		    <form class="col s12" method="POST" name="cadastroForm">
+		      <div class="row">
+		        <div class="input-field col s12">
+		          <input id="first_name" type="text" class="validate">
+		          <label for="first_name">Nome do Serviço</label>
+		        </div>
+		      </div>
+		      <div class="row">
+		        <div class="input-field col s6">
+		          <input  type="date" class="validate">
+		          <label for="disabled">Hora Inicio</label>
+		        </div>
+
+		        <div class="input-field col s6">
+		          <input  type="date" class="validate">
+		          <label for="disabled">Hora Fim</label>
+		        </div>
+		      </div>
+		      <div class="row">
+		        <div class="input-field col s12">
+		          <input id="email" type="text" class="validate">
+		          <label for="email">Limite de pessoas na fila</label>
+		        </div>
+		      </div>
+		      <div class="row">
+		        <div class="input-field col s12">
+		          <input id="email" type="text" class="validate">
+		          <label for="email">Descrição</label>
+		        </div>
+		      </div>
+		      
+		    </form>
+		  </div>
+		  <input  class="waves-effect waves-light btn" type="button" value="Proximo" onclick="cadastrarServico(this.form)">
+	</div>
+</div>
+		
+<footer class="page-footer footer-fcamra">
+	<div class="footer-copyright">
+		<div class="container center">
+			<div class="switch">
+			    <label>
+			      Ocupado
+			      <input type="checkbox">
+			      <span class="lever"></span>
+			      Disponivel
+			    </label>
+			</div>
+		</div>
+	</div>
+</footer>
+
+
+
+   		<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  		<script src="dist/js/materialize.js"></script>
+  		<script src="dist/js/init.js"></script>
+  		
+  	
+
+    </body>
+</html>
