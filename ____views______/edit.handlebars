@@ -1,0 +1,20 @@
+<div class="card">
+<form action="/atividades/update" method="post">
+    <input type="hidden" name="_id" value="{{atividade._id}}">
+    <label for="nome">Nome: </label>
+    <input type="text" name="nome" id="nome" placeholder="Nome da atividade"> 
+
+    <label for="descricao">Descricao: </label>
+    <input type="text" name="descricao" id="descricao" placeholder="Descrição da Atividade"> 
+
+    <input type="datetime" name="hr_inicio" id="hr_inicio">
+
+    <label for="nome">Horário de Término: </label>
+    <input type="datetime" name="hr_fim" id="hr_fim">
+
+    <label for="limite">Limite de pessoas </label>
+    <input type="number" name="limite" id="limite">
+ 
+    <button type="submit" class="btn btn-success">Finalizar</button>
+</form>
+</div>
