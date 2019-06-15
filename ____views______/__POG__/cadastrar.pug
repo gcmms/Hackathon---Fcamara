@@ -1,0 +1,50 @@
+doctype html
+html(lang='pt-br')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no', name='viewport')
+    link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
+    link(href='dist/css/materialize.css', type='text/css', rel='stylesheet', media='screen,projection')
+    link(href='dist/css/style.css', type='text/css', rel='stylesheet', media='screen,projection')
+  body
+    nav.nav-extended
+      .nav-wrapper
+        img.brand-logo(height='50', src='dist/img/fcamara.png')
+        // <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    .row
+      #fila.col.s12.active
+        .row
+          form.col.s12
+            .row
+              .input-field.col.s12
+                input#first_name.validate(type='text')
+                label(for='first_name') Nome do Serviço
+            .row
+              .input-field.col.s6
+                input.validate(type='date')
+                label(for='disabled') Hora Inicio
+              .input-field.col.s6
+                input.validate(type='date')
+                label(for='disabled') Hora Fim
+            .row
+              .input-field.col.s12
+                input#email.validate(type='text')
+                label(for='email') Limite de pessoas na fila
+            .row
+              .input-field.col.s12
+                input#email.validate(type='text')
+                label(for='email') Descrição
+        a.waves-effect.waves-light.btn Cadastrar
+    footer.page-footer.footer-fcamra
+      .footer-copyright
+        .container.center
+          .switch
+            label
+              | Ocupado
+              input(type='checkbox')
+              span.lever
+              | 			      Disponivel
+    script(src='https://code.jquery.com/jquery-2.1.1.min.js')
+    script(src='dist/js/materialize.js')
+    script(src='dist/js/init.js')
